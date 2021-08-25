@@ -55,13 +55,13 @@ class SnakeActor(x: Int, y: Int) : SimpleMovingActor(x, y, DRAW_SIZE, DRAW_SIZE)
 
     fun handleKeyInput(keyCode: Int) {
         if (keyCode == KeyEvent.KEYCODE_W) {
-            getVelocity().stop().setYDirection(Velocity.DIRECTION_UP).setYSpeed(STEP.toFloat())
+            velocity.stop().setYDirection(Velocity.DIRECTION_UP).setYSpeed(STEP.toFloat())
         } else if (keyCode == KeyEvent.KEYCODE_S) {
-            getVelocity().stop().setYDirection(Velocity.DIRECTION_DOWN).setYSpeed(STEP.toFloat())
+            velocity.stop().setYDirection(Velocity.DIRECTION_DOWN).setYSpeed(STEP.toFloat())
         } else if (keyCode == KeyEvent.KEYCODE_A) {
-            getVelocity().stop().setXDirection(Velocity.DIRECTION_LEFT).setXSpeed(STEP.toFloat())
+            velocity.stop().setXDirection(Velocity.DIRECTION_LEFT).setXSpeed(STEP.toFloat())
         } else if (keyCode == KeyEvent.KEYCODE_D) {
-            getVelocity().stop().setXDirection(Velocity.DIRECTION_RIGHT).setXSpeed(STEP.toFloat())
+            velocity.stop().setXDirection(Velocity.DIRECTION_RIGHT).setXSpeed(STEP.toFloat())
         }
     }
 
